@@ -23,14 +23,13 @@ This will declare any needed namespaces, without declaring over anything.
 When serving assets in development mode, just adds a simple javascript function.
 When precompiling assets, declares all needed namespaces for a bundle at the top.
 eg. 
+in things/stuff/main.js
 ```javascript
-//= require other_file
-//= jsnamespace Woot.Things
-Woot.Things.Stuff.Me = Backbone.Model.extend({
+//= jsnamespace Woot.Things.Stuff
+Woot.Things.Stuff.Main = Backbone.Model.extend({
   
 });
 ```
-
 ## Contributing
 
 1. Fork it
