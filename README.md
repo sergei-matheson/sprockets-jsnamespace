@@ -1,6 +1,6 @@
 # Sprockets::Jsnamespace
 
-TODO: Write a gem description
+Adds support for simple javascript namespacing to sprockets
 
 ## Installation
 
@@ -18,7 +18,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Adds support for a new sprockets directive: jsnamespace
+This will declare any needed namespaces, without declaring over anything.
+When serving assets in development mode, just adds a simple javascript function.
+When precompiling assets, declares all needed namespaces for a bundle at the top.
+eg. 
+```javascript
+//= require other_file
+//= jsnamespace Woot.Things
+Woot.Things.Stuff.Me = Backbone.Model.extend({
+  
+});
+```
 
 ## Contributing
 
